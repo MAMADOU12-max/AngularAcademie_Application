@@ -1,0 +1,36 @@
+<!--<h1>hello  {{title}}</h1>-->
+<!--condition-->
+<!--<h1 [innerText]="1+1==2 ? 'toto' : 'tata'"></h1>-->
+<!--property tjrs crochet (quittez ts vers html)-->
+<!--eventbinding parenthése et property binding crochet-->
+<!--  <button [disabled]="!ok">ok</button>-->
+  <!---->
+
+<!--  <button (click)="ok = true;">Activez le champ</button>-->
+<!--<hr>-->
+<!--<input [disabled]="!ok" type="text" placeholder="entrez votre nom">-->
+
+
+<!--  <button (click)="onSubmit()">Activez le champ</button>-->
+<!--<hr>-->
+<!--<input [disabled]="!ok" type="text" placeholder="entrez votre nom">-->
+
+<!--active or desective input selon le bouton-->
+<!--1ere méthode-->
+<!--<button (click)="onSubmit()"  class="btn btn-danger" [innerText]="activated ? 'activer' : 'desactiver'">{{activated}}</button>-->
+<!--<hr>-->
+<!--<input [disabled]="!ok" [(ngModel)]="title" type="text" placeholder="entrez votre nom">-->
+<!--2ere méthode-->
+<!--au niveau du ts-->
+
+<app-header></app-header>
+
+
+<app-jumbottron-bien></app-jumbottron-bien>
+
+<div class="container">
+<router-outlet></router-outlet>
+<!--  <app-list-bien></app-list-bien>-->
+</div>
+
+<app-footer></app-footer>

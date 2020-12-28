@@ -1,0 +1,24 @@
+<div class="card" style="width: 18rem;">
+<!--  [src]="bien.image"-->
+  <img class="card-img-top" src="{{ filsInput?.image }}" alt="Card image cap">
+
+  <div class="card-body">
+    <h5 class="card-title">{{ filsInput?.title | uppercase }}</h5>
+    <p class="card-text">{{ filsInput?.description | summarize: 50}}</p>
+    <span class="float-left btn btn-sm btn-outline-warning disabled">{{ filsInput?.price | separator: '.' }}fcfa</span>
+    <span class="btn btn-sm text-center disabled"> {{filsInput?.createAt | timeleft}} </span>
+    <a routerLink="/biens/{{filsInput?.id }}" class="btn btn-sm btn-primary float-right h3"   (click)="onReserve()">Details</a>
+  </div>
+</div>
+<!--<div class="card" style="width: 18rem;">-->
+<!--  &lt;!&ndash;  [src]="bien.image"&ndash;&gt;-->
+<!--  <img class="card-img-top" src="https://source.unsplash.com/1080x720/?computer,home" alt="Card image cap">-->
+
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">card title</h5>-->
+<!--    <p class="card-text">{{description }}</p>-->
+<!--    <span class="float-left btn btn-sm btn-outline-warning disabled">{{ price | separator: '.' }}</span>-->
+<!--    <span class="btn btn-sm text-center disabled"> {{date | timeleft}}</span>-->
+<!--    <a routerLink="" class="btn btn-sm btn-primary float-right"   (click)="onReserve()">Details</a>-->
+<!--  </div>-->
+<!--</div>-->
