@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from '../../../Services/auth.service';
+import {AuthguardService} from '../../../Services/authguard.service';
 
 @Component({
   selector: 'app-jumbottron-bien',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JumbottronBienComponent implements OnInit {
 
-  constructor() { }
+  situation: boolean ;
+  constructor(private authService: AuthService, private authguardService: AuthguardService) { }
 
   ngOnInit(): void {
+  }
+
+  connect() {
+      this.authService.login() ;
+    console.log(this.authService.logginIn );
+  }
+
+  deconnect() {
+     this.authService.logout() ;
   }
 
 }

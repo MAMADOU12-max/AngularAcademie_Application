@@ -16,13 +16,14 @@ import { TimeleftPipe } from '../pipes/timeleft.pipe';
 import { SummarizePipe } from '../pipes/summarize.pipe';
 import {RouterModule, Routes} from '@angular/router';
 import { FilterPipe } from '../pipes/filter.pipe';
-
-const appRoutes: Routes = [
-  {path: '', redirectTo: '/biens', pathMatch: 'full'},
-  {path: 'biens', component: ListBienComponent } ,
-  {path: 'biens/add', component: AddBienComponent },
-  {path: 'biens/:id', component: DetailBienComponent}
-]
+import { ReservationBiensComponent } from './biens/reservation-biens/reservation-biens.component';
+import { DetailsReservationComponent } from './biens/reservation-biens/details-reservation/details-reservation.component';
+import { EditReservationComponent } from './biens/reservation-biens/edit-reservation/edit-reservation.component';
+import {AppRoutingModule} from './app-routing/app-routing.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ErrorsComponent } from './errors/errors.component';
+import { ConnexionComponent } from './connexion/connexion.component';
+import { RegisterComponent } from './connexion/register/register.component';
 
 @NgModule({
   declarations: [
@@ -38,12 +39,19 @@ const appRoutes: Routes = [
     SeparatorPipe,
     TimeleftPipe,
     SummarizePipe,
-    FilterPipe
+    FilterPipe,
+    ReservationBiensComponent,
+    DetailsReservationComponent,
+    EditReservationComponent,
+    PageNotFoundComponent,
+    ErrorsComponent,
+    ConnexionComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+     AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

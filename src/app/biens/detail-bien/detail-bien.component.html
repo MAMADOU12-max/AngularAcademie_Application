@@ -1,6 +1,4 @@
-
-
-  <div class="row mt-5">
+<div class="row mt-5">
     <h6 class="display-4">Détails du Bien</h6>
   </div>
   <div class="row">
@@ -9,10 +7,10 @@
         <img
           class="card-img-top"
           src="{{bienRecup.image}}"
-          alt="Annonce 1"
+          alt="{{bienRecup.title}}"
         />
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
+          <h5 class="card-title">{{bienRecup.title}}</h5>
           <p class="card-text">
               {{bienRecup.description}}
           </p>
@@ -49,9 +47,9 @@
       <hr>
       <h4>Les biens similaires</h4>
       <ul>
-        <li><a [routerLink]="[]">Bien Similaire 1</a></li>
-        <li><a [routerLink]="[]">Bien similaire 2</a></li>
-        <li><a [routerLink]="[]">Bien Similaire 3</a></li>
+        <li><a [routerLink]="['/biens',1]">Bien Similaire 1</a></li>
+        <li><a [routerLink]="['/biens',2]">Bien similaire 2</a></li>
+        <li><a [routerLink]="['/biens',3]">Bien Similaire 3</a></li>
       </ul>
     </div>
   </div>

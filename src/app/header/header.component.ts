@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
     this.searchService.currentSearch.subscribe(search => this.search = search) ;
   }
 
-  newMessage(search) {
+  newMessage(search: string) {
       this.searchService.changeValue(search) ;
   }
 
