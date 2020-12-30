@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { BiensComponent } from './biens/biens.component';
@@ -50,8 +50,9 @@ import { RegisterComponent } from './connexion/register/register.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-     AppRoutingModule
+    FormsModule,          //pour les templates driven
+     AppRoutingModule,
+    ReactiveFormsModule   //pour react-forms
   ],
   providers: [],
   bootstrap: [AppComponent]

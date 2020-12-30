@@ -7,7 +7,7 @@ import {User, UsersService} from './users.service';
 export class AuthService {
 
     logginIn: boolean =  false;
-    connectedUser: null ;
+    connectedUser: null | any ;
 
     constructor(private userService: UsersService) { }
 
@@ -37,4 +37,8 @@ export class AuthService {
       this.logginIn = false ;
       this.connectedUser = null ;
     }
+
+    //  ngModel : nobinding
+    //  [ngModel] : one way binding
+    //  [(ngMoel)] : two ways binding 
 }

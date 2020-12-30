@@ -9,7 +9,7 @@ import {AuthguardService} from '../../../Services/authguard.service';
 })
 export class JumbottronBienComponent implements OnInit {
 
-  situation: boolean ;
+  situation: boolean | any;
   constructor(private authService: AuthService, private authguardService: AuthguardService) { }
 
   ngOnInit(): void {

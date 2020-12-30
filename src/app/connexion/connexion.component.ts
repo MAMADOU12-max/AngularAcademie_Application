@@ -8,10 +8,23 @@ import {NgForm} from '@angular/forms';
 })
 export class ConnexionComponent implements OnInit {
 
-  @ViewChild('loginform') myform: NgForm;
+  @ViewChild('loginform') myform: NgForm ;
   constructor() { }
 
+  proposerEmail(){
+
+    const myEmail = 'niangali@gmail.com' ;
+    this.myform.setValue({
+      username: myEmail ,
+      password: ''
+    });
+    this.myform.form.patchValue({
+      username: 'test'
+    })
+  }
+
   ngOnInit(): void {
+      console.log(this.myform.value.username);
   }
   //
   // onSubmit(form: HTMLFontElement) {
@@ -24,6 +37,7 @@ export class ConnexionComponent implements OnInit {
   // }
   onSubmit(form: NgForm) {
     console.log(this.myform.valid);
+    alert('email: '+ this.myform.value.username) ;
 
   }
 
