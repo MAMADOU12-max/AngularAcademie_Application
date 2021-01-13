@@ -8,7 +8,7 @@ import {NgForm} from '@angular/forms';
 })
 export class ConnexionComponent implements OnInit {
 
-  @ViewChild('loginform') myform: NgForm ;
+  @ViewChild('loginform') myform: NgForm | any;
   constructor() { }
 
   proposerEmail(){
@@ -36,9 +36,8 @@ export class ConnexionComponent implements OnInit {
   //
   // }
   onSubmit(form: NgForm) {
-    console.log(this.myform.valid);
-    alert('email: '+ this.myform.value.username) ;
-
+      console.log(this.myform.valid);
+      alert('email: '+ this.myform.value.username) ;
   }
 
 }
